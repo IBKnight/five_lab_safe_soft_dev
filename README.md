@@ -12,15 +12,15 @@
 		![filling_buffer](images/filling_buffer.png)
 	2. Переполнение буффера специальными символами.
 		Мы используем уязвимость переполнения буфера, заполняя буфер определённой последовательностью байтов. Цель заключается в том, чтобы изменить значение переменной `check` на 0xDEADBEEF. Для этого мы заполняем буфер фиктивными данными до тех пор, пока не достигнем области памяти, где хранится переменная `check`. После этого мы записываем в эту область нужное значение (0xDEADBEEF) путём непосредственного размещения байтов в порядке, соответствующем логике архитектуры (например, порядок little-endian для x86/x64).
-		![after_buffer_overflow](images\after_buffer_overflow.png)
+		![after_buffer_overflow](images/after_buffer_overflow.png)
 		
 		После переполнения буфера в переменной чек мы получаем значение `0xdeadbeef`
 
-		![check_value](images\check_value.png)
+		![check_value](images/check_value.png)
 		
 		Соответственно, у нас проходит проверка, после чего происходит открытие терминала.
 
-		![opening_console](images\opening_console.png)
+		![opening_console](images/opening_console.png)
 
         После чего программа завершается.
 		
